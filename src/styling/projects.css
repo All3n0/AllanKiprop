@@ -1,0 +1,71 @@
+/* projects.css */
+
+#projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Makes the page take up the whole height of the viewport */
+    padding: 20px;
+    color: white;
+    background-image: url('https://img.freepik.com/free-vector/luxury-background-dark-modern-wave-gradient-design_343694-3090.jpg?semt=ais_hybrid');
+    background-size: cover;
+    box-sizing: border-box; /* Ensures padding is included in total width/height */
+  }
+  
+  #projects h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+  
+  #projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .project-card {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add smooth transition */
+  }
+  
+  .project-card:hover {
+    transform: scale(1.05); /* Slightly enlarge the card on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+  }
+  
+  .project-card img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .project-info {
+    padding: 15px;
+  }
+  
+  .project-info h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .project-info p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+  
+  .project-info a {
+    color: #3b5b7a; /* Adjust as needed */
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .project-info a:hover {
+    text-decoration: underline;
+  }
+  

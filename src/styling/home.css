@@ -1,0 +1,121 @@
+#home {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically center the content */
+    align-items: center; /* Horizontally center the content */
+    background-image: url('https://img.freepik.com/free-vector/luxury-background-dark-modern-wave-gradient-design_343694-3090.jpg?semt=ais_hybrid');
+    background-size: cover;
+    text-align: center; /* Center the text */
+    overflow: hidden;
+}
+
+#name, #role, p {
+    margin-left: 0; /* Reset the margin */
+    margin-right: 0; /* Reset the margin */
+}
+
+#name {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+}
+
+#name h1 {
+    font-size: 6rem;
+    line-height: 1.1;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    margin: 0;
+    color: #ffffff;
+    display: block;
+    text-decoration: dotted underline;
+    text-decoration-color: #3cbabe;
+    transition: transform 0.3s ease;
+}
+
+#name h1:first-child {
+    position: relative;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+#name h1:last-child {
+    position: relative;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect to move Allan up and Kiprop to the left */
+#name:hover h1:first-child {
+    transform: translateY(-20px); /* Moves Allan up */
+}
+
+#name:hover h1:last-child {
+    transform: translateX(-20px); /* Moves Kiprop to the left */
+}
+
+#role {
+    margin-top: 20px;
+}
+
+#role h2 {
+    display: inline;
+    font-size: 2rem;
+    margin: 0 10px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+#role h2:not(:last-child)::after {
+    content: "#";
+    color: #3cbabe;
+    margin-left: 10px;
+}
+
+p {
+    font-size: 2.9rem;
+    margin-top: 20px;
+    max-width: 500px;
+    color: #3cbabe;
+    line-height: 1.6;
+    font-weight: 600;
+    text-align: center; /* Center-align paragraph text */
+}
+
+#home span {
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Scrolling ticker for languages */
+#languages {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#languages p {
+    display: inline-block;
+    white-space: nowrap;
+    color: #3cbabe;
+    font-size: 1.8rem;
+    font-weight: 600;
+    animation: ticker 15s linear infinite;
+    padding-left: 40px;
+}
+
+@keyframes ticker {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}

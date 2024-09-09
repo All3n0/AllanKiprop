@@ -1,0 +1,30 @@
+#about {
+    min-height: 100vh; /* Ensures the section takes up at least the full viewport height */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url('https://img.freepik.com/free-vector/luxury-background-dark-modern-wave-gradient-design_343694-3090.jpg?semt=ais_hybrid');
+    background-size: cover;/* Light background color for the about page */
+    color: #2fd6db; /* Dark text color for readability */
+    padding: 20px;
+}
+
+#about h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: white;
+    text-decoration: underline; /* Optional: color for the heading */
+}
+
+#about p {
+    font-size: 1.2rem;
+    max-width: 800px; /* Limit the width of the paragraph */
+    text-align: center; /* Center the text within the paragraph */
+    line-height: 1.6; /* Improve readability */
+    color: #b5e1e4; /* Slightly lighter text color for the paragraph */
+}
+
+.content {
+    text-align: center;
+}
