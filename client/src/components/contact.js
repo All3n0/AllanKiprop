@@ -4,7 +4,7 @@ import Navbar from "./Navbar";
 
 // Define the details for each social media
 const socialMediaDetails = {
-  linkedin: <a href="https://www.linkedin.com/in/allankiprop/" target="_blank" rel="noopener noreferrer">Contact me on LinkedIn</a>,
+  linkedin: <a href="https://www.linkedin.com/in/allan-kiprop-51767431a/" target="_blank" rel="noopener noreferrer">Contact me on LinkedIn</a>,
   gmail: <a href="mailto:kipropallan24@gmail.com" target="_blank" rel="noopener noreferrer">Contact me on Gmail</a>,
   whatsapp: <a href="https://wa.me/0775976640" target="_blank" rel="noopener noreferrer">Contact me on WhatsApp</a>,
   instagram: <a href="https://www.instagram.com/_.allxns2real/" target="_blank" rel="noopener noreferrer">Contact me on Instagram</a>,
