@@ -60,15 +60,22 @@
 
 #role {
     margin-top: 20px;
+    padding: 0 20px; /* Add padding to prevent text from touching the edges */
+    width: 100%;
+    max-width: 600px; /* Restrict the width for proper text wrapping */
+    box-sizing: border-box;
+    text-align: center; /* Ensure text is centered */
 }
 
 #role h2 {
-    display: inline;
+    display: inline-block; /* Allows it to behave like inline text, but still respects padding/margins */
     font-size: 2rem;
     margin: 0 10px;
     color: white;
     text-transform: uppercase;
     font-weight: bold;
+    word-wrap: break-word; /* Allows text to break into multiple lines if necessary */
+    white-space: normal; /* Allows text to wrap */
 }
 
 #role h2:not(:last-child)::after {
@@ -117,5 +124,69 @@ p {
     }
     100% {
         transform: translateX(-100%);
+    }
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Large Tablets and Below (max-width: 1024px) */
+@media (max-width: 1024px) {
+    #name h1 {
+        font-size: 4.5rem; /* Reduce name font size */
+    }
+
+    p {
+        font-size: 2.2rem; /* Reduce paragraph font size */
+    }
+
+    #role h2 {
+        font-size: 1.8rem; /* Reduce role font size */
+    }
+
+    #languages p {
+        font-size: 1.6rem; /* Reduce ticker font size */
+    }
+}
+
+/* Mobile Devices (max-width: 768px) */
+@media (max-width: 768px) {
+    #home {
+        padding: 20px;
+    }
+
+    #name h1 {
+        font-size: 3.5rem; /* Further reduce name font size */
+    }
+
+    p {
+        font-size: 1.8rem; /* Reduce paragraph font size */
+        max-width: 100%; /* Remove the max-width for better readability */
+    }
+
+    #role h2 {
+        font-size: 1.5rem; /* Reduce role font size */
+    }
+
+    #languages p {
+        font-size: 1.4rem; /* Further reduce ticker font size */
+    }
+}
+
+/* Small Mobile Devices (max-width: 480px) */
+@media (max-width: 480px) {
+    #name h1 {
+        font-size: 2.8rem; /* Reduce name font size for smaller screens */
+    }
+
+    p {
+        font-size: 1.6rem; /* Further reduce paragraph font size */
+    }
+
+    #role h2 {
+        font-size: 1.2rem; /* Further reduce role font size */
+    }
+
+    #languages p {
+        font-size: 1.2rem; /* Adjust ticker font size */
     }
 }

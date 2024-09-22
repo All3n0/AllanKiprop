@@ -1,44 +1,95 @@
-/* navbar.css */
-
 #navbar {
-    position: fixed; /* Make sure the navbar stays at the top */
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    /* background-color: #333; Dark background for better contrast */
     display: flex;
-    justify-content: center; /* Center links horizontally */
-    align-items: center; /* Center links vertically */
-    padding: 10px 0; /* Adjust padding as needed */
-    z-index: 1000; /* Ensure the navbar is above other content */
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    z-index: 1000;
 }
 
 #navbar a {
-    color: white; /* White text color */
-    text-decoration: none; /* Remove default underline */
-    font-size: 1.2rem; /* Adjust font size as needed */
-    margin: 0 15px; /* Space between links */
-    position: relative; /* Needed for the pseudo-element */
-    transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition */
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    margin: 0 15px;
+    position: relative;
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
 #navbar a:hover {
-    color: #3cbabe; /* Change text color on hover */
-    transform: scale(1.1); /* Slightly enlarge the link on hover */
+    color: #3cbabe;
+    transform: scale(1.1);
 }
 
 #navbar a::after {
-    content: ''; /* Create the blue underline */
+    content: '';
     position: absolute;
-    bottom: -5px; /* Position the underline just below the text */
+    bottom: -5px;
     left: 0;
     width: 100%;
-    height: 2px; /* Thickness of the underline */
-    background-color: #3cbabe; /* Blue underline color */
-    transform: scaleX(0); /* Initially hidden */
-    transition: transform 0.3s ease; /* Smooth transition */
+    height: 2px;
+    background-color: #3cbabe;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
 }
 
 #navbar a:hover::after {
-    transform: scaleX(1); /* Show the underline on hover */
+    transform: scaleX(1);
+}
+
+/* Hiding the links initially for small screens */
+#navbar ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#navbar ul li {
+    margin: 0 10px;
+}
+
+#navbar .menu-icon {
+    display: none; /* Hide hamburger by default */
+}
+
+@media (max-width: 768px) {
+    #navbar {
+        justify-content: flex-end;
+        padding: 10px;
+    }
+
+    #navbar ul {
+        display: none; /* Hide links */
+        position: absolute;
+        top: 50px;
+        right: 10px;
+        background-color: rgba(0, 0, 0, 0.8);
+        flex-direction: column;
+        width: 200px;
+        border-radius: 10px;
+    }
+
+    #navbar ul.active {
+        display: flex; /* Show the links when active */
+    }
+
+    #navbar .menu-icon {
+        display: block;
+        cursor: pointer;
+        font-size: 2rem;
+        color: #fff;
+        margin-right: 20px;
+    }
+
+    #navbar a {
+        padding: 10px 0;
+        width: 100%;
+        text-align: center;
+    }
 }
